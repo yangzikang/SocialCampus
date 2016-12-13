@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/titleBar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="42dp"
+            android:id="@+id/back"
+            android:background="@drawable/backup_button"
+            android:elevation="1dp" />
+
+        <TextView
+            android:text="SocialCampus"
+            android:layout_width="279dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp"
+            android:layout_weight="0.22"
+            android:id="@+id/title" />
+    </LinearLayout>
+</LinearLayout>

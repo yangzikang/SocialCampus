@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_scindex"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.socialcampus.Application.Index.SCIndexActivity">
+
+    <include layout="@layout/base_title"
+        android:id="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include">
+
+        <com.example.dell.socialcampus.BaseUI.UI.EditWithDelView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.dell.socialcampus.BaseUI.UI.EditWithDelView>
+    </LinearLayout>
+
+</RelativeLayout>
