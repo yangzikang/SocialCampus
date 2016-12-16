@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus;
+package com.example.dell.socialcampus.Application.Welcome;
 /**
  * create by yangzikang 2016/10/23
  * 欢迎页面
@@ -13,8 +13,7 @@ import com.example.dell.socialcampus.Config.Config;
 import com.example.dell.socialcampus.Application.Login.SCLoginActivity;
 import com.example.dell.socialcampus.BaseController.SCBaseActivity;
 import com.example.dell.socialcampus.Manager.ThreadManager.SCThreadManager;
-import java.util.concurrent.Future;
-import rx.observers.*;
+import com.example.dell.socialcampus.R;
 
 public class SCWelcomeActivity extends SCBaseActivity{
     private final int SLEEPTIME = 2000;

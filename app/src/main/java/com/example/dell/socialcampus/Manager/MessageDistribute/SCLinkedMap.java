@@ -11,6 +11,7 @@ public class SCLinkedMap {
         private Entry next = null;
 
         Entry(String key,Object value) {
+            this.key = key;
             this.value = value;
         }
     }
