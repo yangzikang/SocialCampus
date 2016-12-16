@@ -27,7 +27,7 @@ public class SCWelcomeActivity extends SCBaseActivity{
     @Override
     protected void onStart(){
         super.onStart();
-        SCThreadManager.getInstance().returnExecutorService().submit(new Runnable() {
+        new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
@@ -37,7 +37,7 @@ public class SCWelcomeActivity extends SCBaseActivity{
                 }
                 selectActivity();
             }
-        });
+        }).start();
 
     }
 

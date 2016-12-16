@@ -6,10 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.dell.socialcampus.Application.Login.SCLoginActivity;
 import com.example.dell.socialcampus.BaseController.SCBaseActivity;
 import com.example.dell.socialcampus.R;
-import com.example.dell.socialcampus.Manager.SCActivityRoute;
+import com.example.dell.socialcampus.Manager.ActivityManager.SCActivityRoute;
 
 public class SCMineActivity extends SCBaseActivity {
 

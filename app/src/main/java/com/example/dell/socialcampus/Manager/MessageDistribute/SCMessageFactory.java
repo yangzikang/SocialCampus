@@ -1,8 +1,5 @@
 package com.example.dell.socialcampus.Manager.MessageDistribute;
 
-import com.example.dell.socialcampus.Manager.MessageDistribute.SCLinkedMap;
-import com.example.dell.socialcampus.Manager.MessageDistribute.SCMessage;
-
 /**
  * Created by atong on 2016/12/13.
  */
@@ -18,8 +15,8 @@ public class SCMessageFactory {
      *
      * createMessage方法内可以放一些逻辑判断，判断生产什么样的消息，然后可以调用消息的set方法做一些初始化
      */
-    public static SCMessage createMessage(SCMessage.Mothed mothed, SCIWorker executer,
-                                          SCIWorker responder, SCLinkedMap parameters){
+    public static SCMessage createMessage(SCMessage.Mothed mothed, SCIResponder executer,
+                                          SCIResponder responder, SCLinkedMap parameters){
         return new SCMessage(mothed,executer,responder,parameters);
     }
 }
