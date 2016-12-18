@@ -7,7 +7,7 @@ import org.json.JSONStringer;
  * Created by atong on 2016/11/27.
  */
 
-public class JSONTranslate {
+public class SCJSONTranslate {
 
     public static Object translateToObject(String jsonString) {
         try {

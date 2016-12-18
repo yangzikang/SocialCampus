@@ -7,8 +7,8 @@ import java.util.concurrent.ExecutorService;
  */
 
 public class SCThreadPoolFactory {
-    private static final int FIXED = 1;
-    private static final int CACHE = 2;
+    public static final int FIXED = 1;
+    public static final int CACHE = 2;
 
     public static ExecutorService createThreadManager(int type){
         if(type == FIXED){

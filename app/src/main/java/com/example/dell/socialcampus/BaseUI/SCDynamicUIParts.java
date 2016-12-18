@@ -13,7 +13,7 @@ import com.example.dell.socialcampus.Application.Login.SCLoginActivity;
  * Created by yang on 2016/10/31.
  */
 
-public class DynamicUIParts {
+public class SCDynamicUIParts {
 
     public static void showToast(Context context,String message){
         Toast.makeText(context,message,Toast.LENGTH_SHORT).show();

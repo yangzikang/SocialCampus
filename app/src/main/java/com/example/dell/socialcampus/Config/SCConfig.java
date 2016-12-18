@@ -5,7 +5,7 @@ package com.example.dell.socialcampus.Config;
  * 测试用使用，不做任何参考
  */
 
-public class Config {
+public class SCConfig {
 
     public boolean isLogin(){
         return true;

@@ -12,9 +12,9 @@ import java.util.ArrayList;
  * android中广播机制即一个观察者模式。但是广播机制比较重型，而自己做的通知中心就比较轻量级
  */
 
-public class SCNotificationCenter implements Watched {
+public class SCNotificationCenter implements SCIWatched {
 
-    private ArrayList<Watcher>   watchers = new ArrayList<>();
+    private ArrayList<SCIWatcher>   watchers = new ArrayList<>();
     private static  SCNotificationCenter notificationCenter = new SCNotificationCenter();
 
     private SCNotificationCenter(){
@@ -32,18 +32,18 @@ public class SCNotificationCenter implements Watched {
     }
 
     @Override
-    public void addWatcher(Watcher watcher) {
+    public void addWatcher(SCIWatcher watcher) {
         watchers.add(watcher);
     }
 
     @Override
-    public void removeWatcher(Watcher watcher) {
+    public void removeWatcher(SCIWatcher watcher) {
         watchers.remove(watcher);
     }
 
     @Override
     public void notifyWatchers(Object message) {
-        for(Watcher watcher: watchers){
+        for(SCIWatcher watcher: watchers){
             watcher.update(message);
         }
     }

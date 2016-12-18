@@ -9,11 +9,13 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.example.dell.socialcampus.Application.Index.SCIndexActivity;
-import com.example.dell.socialcampus.Config.Config;
+import com.example.dell.socialcampus.Config.SCConfig;
 import com.example.dell.socialcampus.Application.Login.SCLoginActivity;
 import com.example.dell.socialcampus.BaseController.SCBaseActivity;
-import com.example.dell.socialcampus.Manager.ThreadManager.SCThreadManager;
+import com.example.dell.socialcampus.Manager.ThreadManager.SCThreadPoolFactory;
 import com.example.dell.socialcampus.R;
+
+import static com.example.dell.socialcampus.Manager.ThreadManager.SCThreadPoolFactory.CACHE;
 
 public class SCWelcomeActivity extends SCBaseActivity{
     private final int SLEEPTIME = 2000;
@@ -27,7 +29,7 @@ public class SCWelcomeActivity extends SCBaseActivity{
     @Override
     protected void onStart(){
         super.onStart();
-        new Thread(new Runnable() {
+        SCThreadPoolFactory.createThreadManager(CACHE).submit(new Runnable() {
             @Override
             public void run() {
                 try {
@@ -37,7 +39,7 @@ public class SCWelcomeActivity extends SCBaseActivity{
                 }
                 selectActivity();
             }
-        }).start();
+        });
 
     }
 
@@ -53,7 +55,7 @@ public class SCWelcomeActivity extends SCBaseActivity{
      */
     private void selectActivity(){
         //决定跳转哪一个页面
-        Config mConfig = new Config();
+        SCConfig mConfig = new SCConfig();
         if(mConfig.isLogin()==true){
             this.finish();
             Intent intent = new Intent(SCWelcomeActivity.this, SCLoginActivity.class);

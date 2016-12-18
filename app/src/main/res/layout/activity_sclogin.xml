@@ -8,7 +8,7 @@
 
     tools:context="com.example.dell.socialcampus.Application.Login.SCLoginActivity">
 
-    <com.example.dell.socialcampus.BaseUI.TitleBarUI
+    <com.example.dell.socialcampus.BaseUI.SCTitleBarUI
         android:id="@+id/include"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold"/>
 
-                <com.example.dell.socialcampus.BaseUI.UI.EditWithDelView
+                <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:inputType="phone"

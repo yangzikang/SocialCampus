@@ -15,8 +15,8 @@ import com.example.dell.socialcampus.R;
  * Created by dell on 2016/10/31.
  */
 
-public class TitleBarUI extends LinearLayout{
-    public TitleBarUI(Context context, AttributeSet attrs) {
+public class SCTitleBarUI extends LinearLayout{
+    public SCTitleBarUI(Context context, AttributeSet attrs) {
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.base_title,this);
     }
