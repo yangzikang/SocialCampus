@@ -4,7 +4,7 @@
     android:id="@+id/activity_scmine"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dell.socialcampus.Application.Mine.SCMineActivity">
+    tools:context="com.example.dell.socialcampus.activity.mine.SCMineActivity">
 
     <include layout="@layout/base_title"
         android:layout_width="match_parent"

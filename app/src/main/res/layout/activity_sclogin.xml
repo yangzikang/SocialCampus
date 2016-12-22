@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.example.dell.socialcampus.Application.Login.SCLoginActivity">
+    tools:context="com.example.dell.socialcampus.activity.login.SCLoginActivity">
 
-    <com.example.dell.socialcampus.BaseUI.SCTitleBarUI
+    <com.example.dell.socialcampus.view.SCTitleBarUI
         android:id="@+id/include"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

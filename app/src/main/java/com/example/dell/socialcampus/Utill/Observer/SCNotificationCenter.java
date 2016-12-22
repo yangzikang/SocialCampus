@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.Utill.Observer;
+package com.example.dell.socialcampus.utill.observer;
 
 
 

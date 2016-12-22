@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.Application.Mine;
+package com.example.dell.socialcampus.activity.mine;
 
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.dell.socialcampus.BaseController.SCBaseActivity;
+import com.example.dell.socialcampus.baseActivity.SCBaseActivity;
 import com.example.dell.socialcampus.R;
-import com.example.dell.socialcampus.Manager.ActivityManager.SCActivityRoute;
+import com.example.dell.socialcampus.manager.activityManager.SCActivityRoute;
 
 public class SCMineActivity extends SCBaseActivity {
 

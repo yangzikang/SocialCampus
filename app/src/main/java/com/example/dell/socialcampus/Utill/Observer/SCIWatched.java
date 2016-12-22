@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.Utill.Observer;
+package com.example.dell.socialcampus.utill.observer;
 
 /**
  * Created by dell on 2016/10/20.

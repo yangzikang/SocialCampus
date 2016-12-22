@@ -4,7 +4,7 @@
     android:id="@+id/activity_scindex"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dell.socialcampus.Application.Index.SCIndexActivity">
+    tools:context="com.example.dell.socialcampus.activity.index.SCIndexActivity">
 
     <include layout="@layout/base_title"
         android:id="@+id/include"
@@ -19,11 +19,11 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/include">
 
-        <com.example.dell.socialcampus.BaseUI.UI.EditWithDelView
+        <com.example.dell.socialcampus.view.UI.EditWithDelView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        </com.example.dell.socialcampus.BaseUI.UI.EditWithDelView>
+        </com.example.dell.socialcampus.view.UI.EditWithDelView>
     </LinearLayout>
 
 </RelativeLayout>

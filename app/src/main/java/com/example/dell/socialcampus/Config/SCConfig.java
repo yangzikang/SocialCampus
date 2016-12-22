@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.Config;
+package com.example.dell.socialcampus.config;
 
 /**
  * Created by yangzikang on 2016/10/19.

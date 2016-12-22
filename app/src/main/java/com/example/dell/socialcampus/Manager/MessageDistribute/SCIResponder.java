@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.Manager.MessageDistribute;
+package com.example.dell.socialcampus.manager.messageDistribute;
 
 /**
  * Created by atong on 2016/12/14.

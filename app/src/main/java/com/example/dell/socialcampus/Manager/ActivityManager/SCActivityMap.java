@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.Manager.ActivityManager;
+package com.example.dell.socialcampus.manager.activityManager;
 
 import android.app.Activity;
 

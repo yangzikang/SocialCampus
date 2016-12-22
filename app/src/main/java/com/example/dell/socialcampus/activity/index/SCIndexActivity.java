@@ -1,8 +1,8 @@
-package com.example.dell.socialcampus.Application.Index;
+package com.example.dell.socialcampus.activity.index;
 
 import android.os.Bundle;
 
-import com.example.dell.socialcampus.BaseController.SCBaseActivity;
+import com.example.dell.socialcampus.baseActivity.SCBaseActivity;
 import com.example.dell.socialcampus.R;
 
 public class SCIndexActivity extends SCBaseActivity {

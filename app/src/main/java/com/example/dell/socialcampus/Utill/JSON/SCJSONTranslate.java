@@ -1,7 +1,6 @@
-package com.example.dell.socialcampus.Utill.JSON;
+package com.example.dell.socialcampus.utill.json;
 
 import org.json.JSONObject;
-import org.json.JSONStringer;
 
 /**
  * Created by atong on 2016/11/27.

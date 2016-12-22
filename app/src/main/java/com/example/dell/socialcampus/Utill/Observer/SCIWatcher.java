@@ -1,6 +1,4 @@
-package com.example.dell.socialcampus.Utill.Observer;
-
-import java.util.Objects;
+package com.example.dell.socialcampus.utill.observer;
 
 public interface SCIWatcher {
 	public void update(Object str);

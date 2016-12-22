@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.Application.Welcome;
+package com.example.dell.socialcampus.activity.welcome;
 /**
  * create by yangzikang 2016/10/23
  * 欢迎页面
@@ -8,14 +8,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.dell.socialcampus.Application.Index.SCIndexActivity;
-import com.example.dell.socialcampus.Config.SCConfig;
-import com.example.dell.socialcampus.Application.Login.SCLoginActivity;
-import com.example.dell.socialcampus.BaseController.SCBaseActivity;
-import com.example.dell.socialcampus.Manager.ThreadManager.SCThreadPoolFactory;
+import com.example.dell.socialcampus.activity.index.SCIndexActivity;
+import com.example.dell.socialcampus.config.SCConfig;
+import com.example.dell.socialcampus.activity.login.SCLoginActivity;
+import com.example.dell.socialcampus.baseActivity.SCBaseActivity;
+import com.example.dell.socialcampus.manager.threadManager.SCThreadPoolFactory;
 import com.example.dell.socialcampus.R;
 
-import static com.example.dell.socialcampus.Manager.ThreadManager.SCThreadPoolFactory.CACHE;
+import static com.example.dell.socialcampus.manager.threadManager.SCThreadPoolFactory.CACHE;
 
 public class SCWelcomeActivity extends SCBaseActivity{
     private final int SLEEPTIME = 2000;

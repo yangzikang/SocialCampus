@@ -1,27 +1,18 @@
-package com.example.dell.socialcampus.Application.Login;
+package com.example.dell.socialcampus.activity.login;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-import java.io.InputStream;
 
 
-import com.example.dell.socialcampus.Application.Index.SCIndexActivity;
-import com.example.dell.socialcampus.Application.Mine.SCMineActivity;
-import com.example.dell.socialcampus.BaseController.SCBaseActivity;
+import com.example.dell.socialcampus.activity.index.SCIndexActivity;
+import com.example.dell.socialcampus.baseActivity.SCBaseActivity;
 import com.example.dell.socialcampus.R;
 
 public class SCLoginActivity extends SCBaseActivity{

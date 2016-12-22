@@ -1,9 +1,9 @@
-package com.example.dell.socialcampus.Manager.MessageDistribute;
+package com.example.dell.socialcampus.manager.messageDistribute;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.dell.socialcampus.Manager.MessageDistribute.SCMessage.MAXRESENDTIME;
+import static com.example.dell.socialcampus.manager.messageDistribute.SCMessage.MAXRESENDTIME;
 
 /**
  * Created by atong on 2016/12/15.

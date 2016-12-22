@@ -1,13 +1,10 @@
-package com.example.dell.socialcampus.BaseUI;
+package com.example.dell.socialcampus.view;
 
 import android.app.Activity;
-import android.app.Service;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
-
-import com.example.dell.socialcampus.Application.Login.SCLoginActivity;
 
 /**
  * Created by yang on 2016/10/31.

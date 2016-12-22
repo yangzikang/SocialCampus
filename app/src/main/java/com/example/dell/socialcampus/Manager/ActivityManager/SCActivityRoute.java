@@ -1,11 +1,10 @@
-package com.example.dell.socialcampus.Manager.ActivityManager;
+package com.example.dell.socialcampus.manager.activityManager;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.example.dell.socialcampus.Application.Login.SCLoginActivity;
-import com.example.dell.socialcampus.Manager.ActivityManager.SCActivityMap;
+import com.example.dell.socialcampus.activity.login.SCLoginActivity;
 
 
 /**

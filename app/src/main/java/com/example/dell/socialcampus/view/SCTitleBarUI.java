@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.BaseUI;
+package com.example.dell.socialcampus.view;
 
 import android.app.Activity;
 import android.content.Context;

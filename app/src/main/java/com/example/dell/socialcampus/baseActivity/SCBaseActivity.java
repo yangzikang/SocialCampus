@@ -1,20 +1,19 @@
-package com.example.dell.socialcampus.BaseController;
+package com.example.dell.socialcampus.baseActivity;
 
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 
-import com.example.dell.socialcampus.Manager.ActivityManager.SCActivityMap;
-import com.example.dell.socialcampus.R;
+import com.example.dell.socialcampus.manager.activityManager.SCActivityMap;
 
 /**
  * Created by yangzikang on 2016/10/21.
  *
  * 用于被其它控制器继承，实现了activity管理的功能，如果xml文件引入了
+ * Activity实质上是View + Controller的角色
+ * 有一些对view的处理，也有业务处理
  */
 public class SCBaseActivity extends Activity{
     private SCActivityMap activityMap;
