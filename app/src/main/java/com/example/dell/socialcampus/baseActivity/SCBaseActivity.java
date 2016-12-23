@@ -17,7 +17,7 @@ import com.example.dell.socialcampus.manager.activityManager.SCActivityMap;
  */
 public class SCBaseActivity extends Activity{
     private SCActivityMap activityMap;
-    private Context mContext;
+    private Context mContext;  //可以获取子类的context
 
     private void setActivityMap(){
         activityMap = SCActivityMap.getInstance();
@@ -31,7 +31,6 @@ public class SCBaseActivity extends Activity{
         }
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -42,7 +41,6 @@ public class SCBaseActivity extends Activity{
 
         Log.d("SCBaseActivity",this.getLocalClassName());
         Log.d("SCBaseActivity", String.valueOf(activityMap.returnActivityCount()));
-
 
     }
     @Override

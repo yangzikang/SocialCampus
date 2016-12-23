@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.activity.index;
+package com.example.dell.socialcampus.childrenActivity.index;
 
 import android.os.Bundle;
 

@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.activity.login;
+package com.example.dell.socialcampus.childrenActivity.login;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-import com.example.dell.socialcampus.activity.index.SCIndexActivity;
+import com.example.dell.socialcampus.childrenActivity.index.SCIndexActivity;
 import com.example.dell.socialcampus.baseActivity.SCBaseActivity;
 import com.example.dell.socialcampus.R;
 

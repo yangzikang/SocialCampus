@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.activity.welcome;
+package com.example.dell.socialcampus.childrenActivity.welcome;
 /**
  * create by yangzikang 2016/10/23
  * 欢迎页面
@@ -8,9 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.dell.socialcampus.activity.index.SCIndexActivity;
+import com.example.dell.socialcampus.childrenActivity.index.SCIndexActivity;
 import com.example.dell.socialcampus.config.SCConfig;
-import com.example.dell.socialcampus.activity.login.SCLoginActivity;
+import com.example.dell.socialcampus.childrenActivity.login.SCLoginActivity;
 import com.example.dell.socialcampus.baseActivity.SCBaseActivity;
 import com.example.dell.socialcampus.manager.threadManager.SCThreadPoolFactory;
 import com.example.dell.socialcampus.R;

@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.activity.mine;
+package com.example.dell.socialcampus.childrenActivity.mine;
 
 import android.content.Intent;
 import android.content.IntentFilter;
