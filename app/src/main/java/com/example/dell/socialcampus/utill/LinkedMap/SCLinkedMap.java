@@ -1,4 +1,4 @@
-package com.example.dell.socialcampus.manager.messageDistribute;
+package com.example.dell.socialcampus.utill.linkedMap;
 
 /**
  * Created by atong on 2016/12/13.

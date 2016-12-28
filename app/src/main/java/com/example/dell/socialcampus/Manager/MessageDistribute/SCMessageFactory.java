@@ -1,5 +1,7 @@
 package com.example.dell.socialcampus.manager.messageDistribute;
 
+import com.example.dell.socialcampus.utill.linkedMap.SCLinkedMap;
+
 /**
  * Created by atong on 2016/12/13.
  */

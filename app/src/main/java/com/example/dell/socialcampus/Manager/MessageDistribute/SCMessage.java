@@ -1,5 +1,7 @@
 package com.example.dell.socialcampus.manager.messageDistribute;
 
+import com.example.dell.socialcampus.utill.linkedMap.SCLinkedMap;
+
 /**
  * Created by atong on 2016/11/7.
  */
@@ -22,7 +24,7 @@ public class SCMessage {
     private int          messageId;           //消息ID
     private int          resendTime;          //重传次数
     private Mothed       mothed;              //消息类型
-    private SCLinkedMap  parameters;          //携带的数据
+    private SCLinkedMap parameters;          //携带的数据
     private SCIResponder responder;           //响应者(接受者，消息的消费)
     private SCIResponder executer;            //执行者(调用者，消息的产生)
     private State        state;               //状态码

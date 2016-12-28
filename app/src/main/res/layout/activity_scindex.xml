@@ -19,11 +19,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/include">
 
-        <com.example.dell.socialcampus.view.UI.EditWithDelView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-        </com.example.dell.socialcampus.view.UI.EditWithDelView>
     </LinearLayout>
 
 </RelativeLayout>
