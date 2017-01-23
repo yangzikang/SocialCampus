@@ -7,7 +7,7 @@ package com.example.dell.socialcampus.config;
 
 public class SCConfig {
 
-    public boolean isLogin(){
+    public static boolean isLogin(){
         return true;
     }
 

@@ -2,6 +2,8 @@ package com.example.dell.socialcampus.utill.linkedMap;
 
 /**
  * Created by atong on 2016/12/13.
+ * 轻量级Map用于解决Map过重的问题
+ * 用键值对的结构体链表来代替Map
  */
 
 public class SCLinkedMap {
@@ -18,13 +20,13 @@ public class SCLinkedMap {
 
     private Entry first = null;
 
-    public void insertFirst(String key,Object value) {
+    public void put(String key,Object value) {
         Entry entry = new Entry(key,value);
         entry.next = first;
         first = entry;
     }
 
-    public Object find(String key) throws Exception {
+    public Object get(String key) throws Exception {
         if (first == null)
             throw new Exception("LinkedList is empty!");
         Entry cursor = first;

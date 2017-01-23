@@ -5,5 +5,5 @@ package com.example.dell.socialcampus.manager.messageDistribute;
  */
 
 public interface SCIResponder {
-    public boolean reciveMessage(SCMessage message);
+    public void reciveMessage(SCMessage message);
 }
