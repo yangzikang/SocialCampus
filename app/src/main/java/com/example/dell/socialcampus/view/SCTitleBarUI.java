@@ -41,6 +41,10 @@ public class SCTitleBarUI extends LinearLayout{
             }
         });
     }
+    public void hideBackButton(){
+        Button button = (Button)findViewById(R.id.back);
+        button.setVisibility(View.INVISIBLE);
+    }
 
 }
 

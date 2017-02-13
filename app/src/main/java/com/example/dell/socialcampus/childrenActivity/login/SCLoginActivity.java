@@ -1,5 +1,6 @@
 package com.example.dell.socialcampus.childrenActivity.login;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -14,45 +15,17 @@ import android.widget.EditText;
 import com.example.dell.socialcampus.childrenActivity.index.SCIndexActivity;
 import com.example.dell.socialcampus.baseActivity.SCBaseActivity;
 import com.example.dell.socialcampus.R;
+import com.example.dell.socialcampus.view.SCDynamicUIParts;
+import com.example.dell.socialcampus.view.SCTitleBarUI;
 
 public class SCLoginActivity extends SCBaseActivity{
 
-    Button login;
-    Button receivVerificationCode;
-    private EditText phoneNumber;
-    private EditText editText;
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_sclogin);
-
-
-
-        login = (Button)findViewById(R.id.button);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SCLoginActivity.this.finish();
-                Intent intent = new Intent(SCLoginActivity.this, SCIndexActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        phoneNumber = (EditText)findViewById(R.id.phoneNumber);
-        editText = (EditText)findViewById(R.id.editText);
-
-        phoneNumber.addTextChangedListener(mTextWatcher);
-        editText.addTextChangedListener(mTextWatcher);
-
-        receivVerificationCode = (Button)findViewById(R.id.button2);
-
-
-
-    }
-    TextWatcher mTextWatcher = new TextWatcher() {
+    private Button       login;
+    private Button       receivVerificationCode;
+    private EditText     phoneNumber;
+    private EditText     editText;
+    private SCTitleBarUI titleBarUI;
+    private TextWatcher  mTextWatcher = new TextWatcher() {
         boolean verificationKey = false;
 
         @Override
@@ -93,9 +66,40 @@ public class SCLoginActivity extends SCBaseActivity{
 
     };
 
+    private void initView(){
+        login                  = (Button)findViewById(R.id.button);
+        phoneNumber            = (EditText)findViewById(R.id.phoneNumber);
+        editText               = (EditText)findViewById(R.id.editText);
+        receivVerificationCode = (Button)findViewById(R.id.button2);
+        titleBarUI             = (SCTitleBarUI)findViewById(R.id.include);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_sclogin);
+        initView();
+
+        titleBarUI.hideBackButton();
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SCLoginActivity.this.finish();
+                Intent intent = new Intent(SCLoginActivity.this, SCIndexActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        phoneNumber.addTextChangedListener(mTextWatcher);
+        editText   .addTextChangedListener(mTextWatcher);
+
+    }
 
     @Override
     public void onBackPressed(){
         super.onBackPressed();
+        SCDynamicUIParts.exitAlertDialog(this);
     }
 }

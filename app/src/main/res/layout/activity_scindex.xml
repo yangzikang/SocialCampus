@@ -6,20 +6,33 @@
     android:layout_height="match_parent"
     tools:context="com.example.dell.socialcampus.childrenActivity.index.SCIndexActivity">
 
-    <include layout="@layout/base_title"
+    <com.example.dell.socialcampus.view.SCTitleBarUI
         android:id="@+id/include"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true" />
+
+    <com.example.dell.socialcampus.view.SCNavigationButtom
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/navigation"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+    </com.example.dell.socialcampus.view.SCNavigationButtom>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/include">
-
-
+        android:layout_below="@+id/include"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/navigation">
+       <FrameLayout
+           android:id="@+id/setIndex"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
     </LinearLayout>
 
 </RelativeLayout>

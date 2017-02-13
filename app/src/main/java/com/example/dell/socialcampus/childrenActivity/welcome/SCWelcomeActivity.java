@@ -29,6 +29,7 @@ public class SCWelcomeActivity extends SCBaseActivity{
     @Override
     protected void onStart(){
         super.onStart();
+
         SCThreadPoolFactory.createThreadManager(CACHE).submit(new Runnable() {
             @Override
             public void run() {
@@ -46,7 +47,7 @@ public class SCWelcomeActivity extends SCBaseActivity{
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        Log.d("SCBaseActivity","根界面释放资源");
+        Log.d("SCBaseActivity","欢迎页面释放资源");
     }
 
 

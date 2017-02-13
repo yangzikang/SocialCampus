@@ -22,12 +22,7 @@ public class SCDynamicUIParts {
         dialog.setCancelable(false);
 
 
-        dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
+        dialog.setNegativeButton("取消", null);
         dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
