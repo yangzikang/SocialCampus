@@ -9,6 +9,7 @@ import android.os.Looper;
 import com.example.dell.socialcampus.baseActivity.SCBaseActivity;
 import com.example.dell.socialcampus.R;
 import com.example.dell.socialcampus.childrenActivity.index.fragment.SCNewsFragment;
+import com.example.dell.socialcampus.view.SCTitleBarUI;
 
 public class SCIndexActivity extends SCBaseActivity {
 
@@ -17,6 +18,10 @@ public class SCIndexActivity extends SCBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scindex);
 
+
+        SCTitleBarUI titleBarUI = (SCTitleBarUI)findViewById(R.id.include);
+        titleBarUI.showAddButton();
+        //启动应用加载
         FragmentManager fragmentManager = this.getFragmentManager();
         Fragment newsFragment = new SCNewsFragment();
         FragmentTransaction transaction =  fragmentManager.beginTransaction();

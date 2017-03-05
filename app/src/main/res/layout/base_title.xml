@@ -26,7 +26,14 @@
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
             android:textSize="20sp"
-            android:layout_weight="0.22"
+            android:layout_weight="0.84"
             android:id="@+id/title" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="42dp"
+            android:id="@+id/add"
+            android:background="@android:drawable/ic_input_add"
+            android:visibility="invisible"/>
     </LinearLayout>
 </LinearLayout>

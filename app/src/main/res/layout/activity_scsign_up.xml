@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_sclogin"
+    android:id="@+id/activity_scsign_up"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context="com.example.dell.socialcampus.childrenActivity.login.SCLoginActivity">
+    tools:context="com.example.dell.socialcampus.childrenActivity.login.SCSignUpActivity">
 
     <com.example.dell.socialcampus.view.SCTitleBarUI
-        android:id="@+id/loginTitleInclude"
+        android:id="@+id/signUpTitleInclude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,7 +20,7 @@
         android:weightSum="1"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/loginTitleInclude">
+        android:layout_below="@+id/signUpTitleInclude">
 
 
         <TableLayout
@@ -49,7 +47,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:inputType="phone"
-                    android:id="@+id/loginAccount"
+                    android:id="@+id/signUpAccount"
                     android:layout_weight="0.8"
                     android:hint="请输入账号" />
 
@@ -73,7 +71,7 @@
                     android:layout_weight="0.8"
                     android:hint="请输入密码"
                     android:inputType="textPassword"
-                    android:id="@+id/loginPassword" />
+                    android:id="@+id/signUpPassword" />
 
             </TableRow>
 
@@ -89,11 +87,11 @@
             >
 
             <Button
-                android:text="登 陆"
+                android:text="注 册"
                 android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/login"
+                android:id="@+id/signUp"
                 android:textColor="@android:color/background_light"
                 android:background="@drawable/button_style_login_gray"
                 android:layout_alignParentTop="true"
@@ -101,20 +99,5 @@
                 android:enabled="false"/>
         </RelativeLayout>
 
-        <RelativeLayout android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/toSignUp"
-                android:text="注册一个"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:background="@android:color/transparent"
-                android:textColor="@color/colorPrimaryDark" />
-        </RelativeLayout>
-
     </LinearLayout>
-
 </RelativeLayout>

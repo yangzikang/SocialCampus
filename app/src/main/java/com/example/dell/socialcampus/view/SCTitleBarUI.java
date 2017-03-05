@@ -2,6 +2,7 @@ package com.example.dell.socialcampus.view;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.dell.socialcampus.R;
+import com.example.dell.socialcampus.childrenActivity.news.SCAddNewsActivity;
 
 /**
  * Created by dell on 2016/10/31.
@@ -32,7 +34,7 @@ public class SCTitleBarUI extends LinearLayout{
         TextView titleBarName = (TextView)findViewById(R.id.title);
         titleBarName.setText(title);
     }
-    public void initTitleButtonBack(){
+    public void initTitleBackButton(){
         Button button = (Button)findViewById(R.id.back);
         button.setOnClickListener(new OnClickListener() {
             @Override
@@ -41,9 +43,32 @@ public class SCTitleBarUI extends LinearLayout{
             }
         });
     }
+    public void initTitleAddButton(){
+        Button button = (Button)findViewById(R.id.back);
+        button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),SCAddNewsActivity.class);
+                getContext().startActivity(intent);
+            }
+        });
+    }
     public void hideBackButton(){
         Button button = (Button)findViewById(R.id.back);
         button.setVisibility(View.INVISIBLE);
+    }
+    public void showBackButton(){
+        Button button = (Button)findViewById(R.id.back);
+        button.setVisibility(View.VISIBLE);
+    }
+
+    public void hideAddButton(){
+        Button add = (Button)findViewById(R.id.add);
+        add.setVisibility(View.INVISIBLE);
+    }
+    public void showAddButton(){
+        Button add = (Button)findViewById(R.id.add);
+        add.setVisibility(View.VISIBLE);
     }
 
 }

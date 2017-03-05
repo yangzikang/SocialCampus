@@ -1,4 +1,5 @@
 package com.example.dell.socialcampus.manager.messageDistribute;
+import com.example.dell.socialcampus.bussness.SCUserManager;
 import com.example.dell.socialcampus.utill.networkRequest.DoGET;
 
 /**
@@ -7,13 +8,18 @@ import com.example.dell.socialcampus.utill.networkRequest.DoGET;
  */
 
 public enum SCMothed {
-    LOGIN,UPDATE;
+    LOGIN,UPDATE,ERROR,SIGNUP;
 
     public static SCIResponder returnResponder(SCMothed mothed){
         switch (mothed) {
             case LOGIN:
-                return new DoGET();
+                return new SCUserManager();
             case UPDATE:
+                System.out.println("还未实现");
+                break;
+            case SIGNUP:
+                return new SCUserManager();
+            case ERROR:
                 System.out.println("还未实现");
                 break;
             default:
