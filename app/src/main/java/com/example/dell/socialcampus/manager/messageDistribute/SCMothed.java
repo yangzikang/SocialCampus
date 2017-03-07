@@ -8,7 +8,7 @@ import com.example.dell.socialcampus.utill.networkRequest.DoGET;
  */
 
 public enum SCMothed {
-    LOGIN,UPDATE,ERROR,SIGNUP;
+    REPLY,LOGIN,UPDATE,ERROR,SIGNUP;
 
     public static SCIResponder returnResponder(SCMothed mothed){
         switch (mothed) {
@@ -19,8 +19,10 @@ public enum SCMothed {
                 break;
             case SIGNUP:
                 return new SCUserManager();
+
+            case REPLY:
+                break;
             case ERROR:
-                System.out.println("还未实现");
                 break;
             default:
                 return null;

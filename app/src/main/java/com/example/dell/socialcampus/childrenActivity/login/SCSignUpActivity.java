@@ -7,6 +7,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -17,11 +18,17 @@ import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.SaveCallback;
 import com.avos.avoscloud.SignUpCallback;
 import com.example.dell.socialcampus.R;
+import com.example.dell.socialcampus.baseActivity.SCBaseActivity;
 import com.example.dell.socialcampus.childrenActivity.index.SCIndexActivity;
+import com.example.dell.socialcampus.manager.messageDistribute.SCIResponder;
+import com.example.dell.socialcampus.manager.messageDistribute.SCMessage;
+import com.example.dell.socialcampus.manager.messageDistribute.SCMothed;
+import com.example.dell.socialcampus.manager.messageDistribute.SCSender;
+import com.example.dell.socialcampus.utill.linkedMap.SCLinkedMap;
 import com.example.dell.socialcampus.view.SCDynamicUIParts;
 import com.example.dell.socialcampus.view.SCTitleBarUI;
 
-public class SCSignUpActivity extends AppCompatActivity {
+public class SCSignUpActivity extends SCBaseActivity implements SCIResponder {
 
     private Button       signUp;
     private EditText     account;
@@ -64,7 +71,6 @@ public class SCSignUpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_scsign_up);
         initView();
 
@@ -73,8 +79,12 @@ public class SCSignUpActivity extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SCSignUpActivity.this, SCLoginActivity.class);
-                startActivity(intent);
+                SCLinkedMap linkedMap = new SCLinkedMap();
+                linkedMap.put("account",account.getText().toString());
+                linkedMap.put("password",password.getText().toString());
+                new SCSender().sendMessage(SCMothed.SIGNUP,linkedMap);
+
+
             }
         });
 
@@ -85,5 +95,19 @@ public class SCSignUpActivity extends AppCompatActivity {
     public void onBackPressed(){
         super.onBackPressed();
         SCDynamicUIParts.exitAlertDialog(this);
+    }
+
+    @Override
+    public void reciveMessage(SCMessage message) {
+
+        Log.d("SCOK",message.getMothed().name());
+
+        if(message.getMothed().equals(SCMothed.REPLY)){
+            Toast.makeText(SCSignUpActivity.this,"注册成功",Toast.LENGTH_LONG);
+            onBackPressed();
+        }
+        else if(message.getMothed().equals(SCMothed.ERROR)){
+            Log.d("SCSign",message.getErrorCause());
+        }
     }
 }

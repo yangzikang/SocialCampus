@@ -15,9 +15,8 @@ public class SCMessage {
     private SCMothed        mothed;              //消息类型
     private SCLinkedMap     parameters;          //携带的数据
     private SCIResponder    responder;           //响应者(接受者，消息的消费)
-    private SCIResponder    executer;            //执行者(调用者，消息的产生)
     private Error           error;               //错误域
-    private Exception       errorCause;          //错误原因
+    private String          errorCause;          //错误原因
 
     /**
      * 类似JavaBean
@@ -27,9 +26,6 @@ public class SCMessage {
     }
     public Error getError(){
         return error;
-    }
-    public void setParameters(SCLinkedMap parameters){
-        this.parameters = parameters;
     }
     public SCLinkedMap getParameters(){
         return parameters;
@@ -43,20 +39,23 @@ public class SCMessage {
     public SCMothed getMothed(){
         return mothed;
     }
-
-
+    public void setErrorCause(String errorCause){
+        this.errorCause = errorCause;
+    }
+    public String getErrorCause(){
+        return errorCause;
+    }
     /**
      * 构造函数
      */
-    public SCMessage(SCMothed mothed, SCIResponder executer, SCLinkedMap parameters){
-        init(mothed, executer, parameters);
+    public SCMessage(SCMothed mothed, SCLinkedMap parameters){
+        init(mothed, parameters);
     }
     /**
      * 初始化函数
      */
-    public void init(SCMothed mothed, SCIResponder executer, SCLinkedMap parameters){
+    public void init(SCMothed mothed, SCLinkedMap parameters){
         this.mothed     = mothed;
-        this.executer   = executer;
         this.responder  = SCMothed.returnResponder(mothed);
         this.parameters = parameters;
         this.error      = null;

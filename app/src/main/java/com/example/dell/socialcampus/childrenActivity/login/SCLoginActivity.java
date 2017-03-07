@@ -19,10 +19,12 @@ import com.avos.avoscloud.SaveCallback;
 import com.example.dell.socialcampus.childrenActivity.index.SCIndexActivity;
 import com.example.dell.socialcampus.baseActivity.SCBaseActivity;
 import com.example.dell.socialcampus.R;
+import com.example.dell.socialcampus.manager.messageDistribute.SCIResponder;
+import com.example.dell.socialcampus.manager.messageDistribute.SCMessage;
 import com.example.dell.socialcampus.view.SCDynamicUIParts;
 import com.example.dell.socialcampus.view.SCTitleBarUI;
 
-public class SCLoginActivity extends SCBaseActivity{
+public class SCLoginActivity extends SCBaseActivity implements SCIResponder{
 
     private Button       login;
     private Button       toSignUp;
@@ -58,6 +60,7 @@ public class SCLoginActivity extends SCBaseActivity{
 
     private void initView(){
         login      = (Button)findViewById(R.id.login);
+        toSignUp   = (Button)findViewById(R.id.toSignUp);
         account    = (EditText)findViewById(R.id.loginAccount);
         password   = (EditText)findViewById(R.id.loginPassword);
         toSignUp   = (Button)findViewById(R.id.toSignUp);
@@ -82,6 +85,13 @@ public class SCLoginActivity extends SCBaseActivity{
             }
         });
 
+        toSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SCLoginActivity.this,SCSignUpActivity.class);
+                startActivity(intent);
+            }
+        });
 
         password.addTextChangedListener(mTextWatcher);
 
@@ -91,5 +101,10 @@ public class SCLoginActivity extends SCBaseActivity{
     public void onBackPressed(){
         super.onBackPressed();
         SCDynamicUIParts.exitAlertDialog(this);
+    }
+
+    @Override
+    public void reciveMessage(SCMessage message) {
+        
     }
 }

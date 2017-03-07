@@ -12,9 +12,6 @@ import android.widget.Toast;
 
 public class SCDynamicUIParts {
 
-    public static void showToast(Context context,String message){
-        Toast.makeText(context,message,Toast.LENGTH_SHORT).show();
-    }
     public static void exitAlertDialog(Context context){
         AlertDialog.Builder dialog = new AlertDialog.Builder(context);
         dialog.setTitle("退出");

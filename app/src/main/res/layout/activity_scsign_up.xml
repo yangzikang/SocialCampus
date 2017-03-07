@@ -46,7 +46,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:inputType="phone"
+                    android:inputType="text"
                     android:id="@+id/signUpAccount"
                     android:layout_weight="0.8"
                     android:hint="请输入账号" />
