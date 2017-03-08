@@ -1,6 +1,7 @@
 package com.example.dell.socialcampus.childrenActivity.index.fragment;
 
 import android.app.Fragment;
+import android.content.BroadcastReceiver;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
