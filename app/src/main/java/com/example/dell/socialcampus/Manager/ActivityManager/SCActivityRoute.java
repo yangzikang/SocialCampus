@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.example.dell.socialcampus.childrenActivity.login.SCLoginActivity;
+import com.example.dell.socialcampus.view.login.SCLoginActivity;
 
 
 /**

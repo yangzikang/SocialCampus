@@ -27,7 +27,7 @@ public class SCActivityMap {
         activities.remove(activityKey);
     }
 
-    public Activity getActivity(String activityKey){
+    public Activity getActivityByName(String activityKey){
         Activity activity = activities.get(activityKey);
         return activity;
     }
@@ -41,7 +41,7 @@ public class SCActivityMap {
         Iterator iterator = activities.keySet().iterator();
         while (iterator.hasNext()) {
             String activitykey = (String)iterator.next();
-            Activity activity = getActivity(activitykey);
+            Activity activity = getActivityByName(activitykey);
 
             activity.finish();
         }

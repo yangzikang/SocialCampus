@@ -1,23 +1,19 @@
 package com.example.dell.socialcampus.bussness;
 
-import android.content.Context;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.LogInCallback;
-import com.avos.avoscloud.LogUtil;
 import com.avos.avoscloud.SignUpCallback;
-import com.avos.avoscloud.okhttp.internal.framed.FrameReader;
-import com.example.dell.socialcampus.childrenActivity.login.SCLoginActivity;
-import com.example.dell.socialcampus.childrenActivity.login.SCSignUpActivity;
-import com.example.dell.socialcampus.manager.messageDistribute.SCIResponder;
-import com.example.dell.socialcampus.manager.messageDistribute.SCMessage;
-import com.example.dell.socialcampus.manager.messageDistribute.SCMothed;
-import com.example.dell.socialcampus.manager.messageDistribute.SCSender;
-import com.example.dell.socialcampus.utill.linkedMap.SCLinkedMap;
-import com.example.dell.socialcampus.view.SCDynamicUIParts;
+import com.example.dell.socialcampus.manager.activityManager.SCActivityMap;
+import com.example.dell.socialcampus.view.login.SCLoginActivity;
+import com.example.dell.socialcampus.view.login.SCSignUpActivity;
+import com.example.dell.socialcampus.utill.messageDistribute.SCIResponder;
+import com.example.dell.socialcampus.utill.messageDistribute.SCMessage;
+import com.example.dell.socialcampus.utill.messageDistribute.SCMothed;
+import com.example.dell.socialcampus.utill.messageDistribute.SCSender;
+import com.example.dell.socialcampus.utill.SCLinkedMap;
 
 /**
  * Created by yangzikang on 2017/2/17.
@@ -34,13 +30,22 @@ public class SCUserManager implements SCIResponder{
             public void done(AVException e) {
                 if (e == null) {
                     Log.d("SCOK","成功了");
-                    SCSender sender = new SCSender();
-                    sender.sendMessage(SCMothed.REPLY,new SCSignUpActivity(),null);
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            SCSender sender = new SCSender();
+                            sender.sendMessage(SCMothed.REPLY,
+                                    (SCIResponder) SCActivityMap.getInstance().getActivityByName("view.login.SCSignUpActivity"),null);
+                        }
+                    }).start();
+
 
                 } else {
                     e.printStackTrace();
+
                     SCSender sender = new SCSender();
-                    sender.sendError(SCMothed.ERROR,new SCSignUpActivity(),e.getMessage());
+                    sender.sendError(SCMothed.ERROR,
+                            (SCIResponder) SCActivityMap.getInstance().getActivityByName("view.login.SCSignUpActivity"),e.getMessage());
                 }
             }
         });

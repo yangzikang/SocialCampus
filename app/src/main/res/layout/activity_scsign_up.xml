@@ -4,9 +4,9 @@
     android:id="@+id/activity_scsign_up"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dell.socialcampus.childrenActivity.login.SCSignUpActivity">
+    tools:context="com.example.dell.socialcampus.view.login.SCSignUpActivity">
 
-    <com.example.dell.socialcampus.view.SCTitleBarUI
+    <com.example.dell.socialcampus.utill.view.SCTitleBarUI
         android:id="@+id/signUpTitleInclude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
