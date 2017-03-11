@@ -1,5 +1,6 @@
 package com.example.dell.socialcampus.view.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,14 +18,14 @@ import com.example.dell.socialcampus.utill.messageDistribute.SCMothed;
 import com.example.dell.socialcampus.utill.messageDistribute.SCSender;
 import com.example.dell.socialcampus.utill.SCLinkedMap;
 import com.example.dell.socialcampus.utill.view.SCDynamicUIParts;
-import com.example.dell.socialcampus.utill.view.SCTitleBarUI;
+import com.example.dell.socialcampus.utill.view.SCTitleBar;
 
 public class SCSignUpActivity extends SCBaseActivity implements SCIResponder {
 
     private Button       signUp;
     private EditText     account;
     private EditText     password;
-    private SCTitleBarUI titleBarUI;
+    private SCTitleBar titleBarUI;
     private TextWatcher  mTextWatcher = new TextWatcher() {
 
         @Override
@@ -56,7 +57,7 @@ public class SCSignUpActivity extends SCBaseActivity implements SCIResponder {
         signUp     = (Button)findViewById(R.id.signUp);
         account    = (EditText)findViewById(R.id.signUpAccount);
         password   = (EditText)findViewById(R.id.signUpPassword);
-        titleBarUI = (SCTitleBarUI)findViewById(R.id.signUpTitleInclude);
+        titleBarUI = (SCTitleBar)findViewById(R.id.signUpTitleInclude);
     }
 
     @Override
@@ -85,7 +86,6 @@ public class SCSignUpActivity extends SCBaseActivity implements SCIResponder {
     @Override
     public void onBackPressed(){
         super.onBackPressed();
-        SCDynamicUIParts.exitAlertDialog(this);
     }
 
     @Override
@@ -94,11 +94,13 @@ public class SCSignUpActivity extends SCBaseActivity implements SCIResponder {
         Log.d("SCOK",message.getMothed().name());
 
         if(message.getMothed().equals(SCMothed.REPLY)){
-            Toast.makeText(SCSignUpActivity.this,"注册成功",Toast.LENGTH_LONG);
+            Toast.makeText(SCSignUpActivity.this,"注册成功",Toast.LENGTH_LONG).show();
+            startActivity(new Intent(SCSignUpActivity.this,SCLoginActivity.class));
 
         }
         else if(message.getMothed().equals(SCMothed.ERROR)){
             Log.d("SCSign",message.getErrorCause());
+            Toast.makeText(SCSignUpActivity.this,"注册失败",Toast.LENGTH_LONG).show();
         }
     }
 }

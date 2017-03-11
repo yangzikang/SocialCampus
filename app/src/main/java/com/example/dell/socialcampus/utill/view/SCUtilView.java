@@ -9,9 +9,9 @@ import android.support.v7.app.AlertDialog;
  * Created by yang on 2016/10/31.
  */
 
-public class SCDynamicUIParts {
+public class SCUtilView {
 
-    public static void exitAlertDialog(Context context){
+    public void exitAlertDialog(Context context){
         AlertDialog.Builder dialog = new AlertDialog.Builder(context);
         dialog.setTitle("退出");
         dialog.setMessage("是否退出校笑");
@@ -28,5 +28,5 @@ public class SCDynamicUIParts {
         });
         dialog.show();
     }
-    public static void finishThisActivity(Context context){((Activity)context).finish();}
+    public void finishThisActivity(Context context){((Activity)context).finish();}
 }

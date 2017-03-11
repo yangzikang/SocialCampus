@@ -9,13 +9,16 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
+import com.example.dell.socialcampus.utill.SCLinkedMap;
+import com.example.dell.socialcampus.utill.messageDistribute.SCMothed;
+import com.example.dell.socialcampus.utill.messageDistribute.SCSender;
 import com.example.dell.socialcampus.view.index.SCIndexActivity;
 import com.example.dell.socialcampus.utill.SCBaseActivity;
 import com.example.dell.socialcampus.R;
 import com.example.dell.socialcampus.utill.messageDistribute.SCIResponder;
 import com.example.dell.socialcampus.utill.messageDistribute.SCMessage;
 import com.example.dell.socialcampus.utill.view.SCDynamicUIParts;
-import com.example.dell.socialcampus.utill.view.SCTitleBarUI;
+import com.example.dell.socialcampus.utill.view.SCTitleBar;
 
 public class SCLoginActivity extends SCBaseActivity implements SCIResponder{
 
@@ -23,7 +26,7 @@ public class SCLoginActivity extends SCBaseActivity implements SCIResponder{
     private Button       toSignUp;
     private EditText     account;
     private EditText     password;
-    private SCTitleBarUI titleBarUI;
+    private SCTitleBar titleBarUI;
     private TextWatcher  mTextWatcher = new TextWatcher() {
 
         @Override
@@ -57,7 +60,7 @@ public class SCLoginActivity extends SCBaseActivity implements SCIResponder{
         account    = (EditText)findViewById(R.id.loginAccount);
         password   = (EditText)findViewById(R.id.loginPassword);
         toSignUp   = (Button)findViewById(R.id.toSignUp);
-        titleBarUI = (SCTitleBarUI)findViewById(R.id.loginTitleInclude);
+        titleBarUI = (SCTitleBar)findViewById(R.id.loginTitleInclude);
     }
 
     @Override
@@ -71,9 +74,10 @@ public class SCLoginActivity extends SCBaseActivity implements SCIResponder{
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SCLoginActivity.this.finish();
-                Intent intent = new Intent(SCLoginActivity.this, SCIndexActivity.class);
-                startActivity(intent);
+                SCLinkedMap linkedMap = new SCLinkedMap();
+                linkedMap.put("account",account.getText().toString());
+                linkedMap.put("password",password.getText().toString());
+                new SCSender().sendMessage(SCMothed.LOGIN,linkedMap);
             }
         });
 
@@ -92,11 +96,13 @@ public class SCLoginActivity extends SCBaseActivity implements SCIResponder{
     @Override
     public void onBackPressed(){
         super.onBackPressed();
-        SCDynamicUIParts.exitAlertDialog(this);
     }
 
     @Override
     public void reciveMessage(SCMessage message) {
-        
+        if(message.getMothed().equals(SCMothed.REPLY)){
+            Intent intent = new Intent(SCLoginActivity.this, SCIndexActivity.class);
+            startActivity(intent);
+        }
     }
 }

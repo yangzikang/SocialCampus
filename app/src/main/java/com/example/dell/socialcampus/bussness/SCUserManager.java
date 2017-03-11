@@ -30,14 +30,11 @@ public class SCUserManager implements SCIResponder{
             public void done(AVException e) {
                 if (e == null) {
                     Log.d("SCOK","成功了");
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
                             SCSender sender = new SCSender();
                             sender.sendMessage(SCMothed.REPLY,
                                     (SCIResponder) SCActivityMap.getInstance().getActivityByName("view.login.SCSignUpActivity"),null);
-                        }
-                    }).start();
+
+
 
 
                 } else {
@@ -56,9 +53,11 @@ public class SCUserManager implements SCIResponder{
             @Override
             public void done(AVUser avUser, AVException e) {
                 if (e == null) {
-                    new SCSender().sendMessage(SCMothed.REPLY,new SCLoginActivity(),(SCLinkedMap) null);
+                    new SCSender().sendMessage(SCMothed.REPLY,
+                            (SCIResponder) SCActivityMap.getInstance().getActivityByName("view.login.SCLoginActivity"),(SCLinkedMap) null);
                 } else {
-                    new SCSender().sendError(SCMothed.ERROR,new SCLoginActivity(),"登陆失败");
+                    new SCSender().sendError(SCMothed.ERROR,
+                            (SCIResponder) SCActivityMap.getInstance().getActivityByName("view.login.SCLoginActivity"),"登陆失败");
                 }
             }
         });

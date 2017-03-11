@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.dell.socialcampus.view.index.SCIndexActivity">
 
-    <com.example.dell.socialcampus.utill.view.SCTitleBarUI
+    <com.example.dell.socialcampus.utill.view.SCTitleBar
         android:id="@+id/include"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
