@@ -2,6 +2,8 @@ package com.example.dell.socialcampus.view.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -17,7 +19,6 @@ import com.example.dell.socialcampus.utill.SCBaseActivity;
 import com.example.dell.socialcampus.R;
 import com.example.dell.socialcampus.utill.messageDistribute.SCIResponder;
 import com.example.dell.socialcampus.utill.messageDistribute.SCMessage;
-import com.example.dell.socialcampus.utill.view.SCDynamicUIParts;
 import com.example.dell.socialcampus.utill.view.SCTitleBar;
 
 public class SCLoginActivity extends SCBaseActivity implements SCIResponder{
@@ -96,6 +97,10 @@ public class SCLoginActivity extends SCBaseActivity implements SCIResponder{
     @Override
     public void onBackPressed(){
         super.onBackPressed();
+        Handler;
+
+        Message;
+
     }
 
     @Override
