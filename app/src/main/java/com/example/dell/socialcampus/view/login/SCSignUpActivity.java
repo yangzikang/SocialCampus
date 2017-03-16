@@ -17,7 +17,6 @@ import com.example.dell.socialcampus.utill.messageDistribute.SCMessage;
 import com.example.dell.socialcampus.utill.messageDistribute.SCMothed;
 import com.example.dell.socialcampus.utill.messageDistribute.SCSender;
 import com.example.dell.socialcampus.utill.SCLinkedMap;
-import com.example.dell.socialcampus.utill.view.SCDynamicUIParts;
 import com.example.dell.socialcampus.utill.view.SCTitleBar;
 
 public class SCSignUpActivity extends SCBaseActivity implements SCIResponder {

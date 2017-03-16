@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class SCNotificationCenter implements SCIWatched {
 
     private ArrayList<SCIWatcher>   watchers = new ArrayList<>();
-    private static  SCNotificationCenter notificationCenter = new SCNotificationCenter();
+    private static  SCNotificationCenter notificationCenter = new SCNotificationCenter();//单例模式
 
     private SCNotificationCenter(){
     }

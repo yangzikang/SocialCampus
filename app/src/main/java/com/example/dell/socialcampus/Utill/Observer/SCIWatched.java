@@ -2,6 +2,8 @@ package com.example.dell.socialcampus.utill.observer;
 
 /**
  * Created by dell on 2016/10/20.
+ *
+ * SCIWatched,被观察者角色
  */
 
 public interface SCIWatched {

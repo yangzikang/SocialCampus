@@ -97,10 +97,6 @@ public class SCLoginActivity extends SCBaseActivity implements SCIResponder{
     @Override
     public void onBackPressed(){
         super.onBackPressed();
-        Handler;
-
-        Message;
-
     }
 
     @Override
