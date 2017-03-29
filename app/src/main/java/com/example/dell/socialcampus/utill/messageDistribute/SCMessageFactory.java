@@ -6,8 +6,8 @@ import com.example.dell.socialcampus.utill.SCLinkedMap;
  * Created by yangzikang on 2016/12/13.
  */
 
-public class
-SCMessageFactory {
+
+public class SCMessageFactory {
     /**
      *
      * @param mothed        消息的类型

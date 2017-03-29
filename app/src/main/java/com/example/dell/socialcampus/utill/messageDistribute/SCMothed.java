@@ -3,7 +3,7 @@ import com.example.dell.socialcampus.bussness.SCUserManager;
 
 /**
  * Created by yangzikang on 2017/1/23.
- * 做映射从
+ * 做映射
  */
 
 public enum SCMothed {

@@ -4,6 +4,8 @@ package com.example.dell.socialcampus.utill;
  * Created by atong on 2016/12/13.
  * 轻量级Map用于解决Map过重的问题
  * 用键值对的结构体链表来代替Map
+ *
+ * 缺点是无法实现，一key多值
  */
 
 public class SCLinkedMap {
